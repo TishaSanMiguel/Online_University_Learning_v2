@@ -12,21 +12,25 @@ studentInfo1 <- studentInfo %>% select(code_module, code_presentation, id_studen
 studentInfo2 <- studentInfo1 %>%
   mutate(code_presentation = gsub(pattern = "B", replacement = "February", x = code_presentation),
          code_presentation = gsub(pattern =  "J", replacement = "October", x = code_presentation))
-studentInfo2 %>% glimpse
+studentInfo2 %>% View
 
 #Would like to be ale to use summarise for the following
 
-studentInfo3 <- filter(studentInfo2, final_result == "Pass") %>% 
-  summarise(sum_pass = sum(final_result == "Pass"))
+studentInfo3 <- filter(studentInfo2, final_result == "Distinction") %>% 
+  summarise(sum_pass = sum(final_result == "Distinction"))
 studentInfo3 %>% glimpse
-#12,361 students passed
-studentInfo4 <- filter(studentInfo2, final_result == "Fail") %>% 
-  summarise(sum_pass = sum(final_result == "Fail"))
+#3,024 students received Distinction
+studentInfo4 <- filter(studentInfo2, final_result == "Pass") %>% 
+  summarise(sum_pass = sum(final_result == "Pass"))
 studentInfo4 %>% glimpse
-#7,052 students failed
-studentInfo5 <- filter(studentInfo2, final_result == "Withdrawn") %>% 
-  summarise(sum_pass = sum(final_result == "Withdrawn"))
+#12,361 students passed
+studentInfo5 <- filter(studentInfo2, final_result == "Fail") %>% 
+  summarise(sum_pass = sum(final_result == "Fail"))
 studentInfo5 %>% glimpse
+#7,052 students failed
+studentInfo6 <- filter(studentInfo2, final_result == "Withdrawn") %>% 
+  summarise(sum_pass = sum(final_result == "Withdrawn"))
+studentInfo6 %>% glimpse
 #10,156 students withdrew
 
 #Distribution of Scores 
