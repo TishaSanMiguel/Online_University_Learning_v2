@@ -1,0 +1,29 @@
+# Springboard_Capstone_Project
+The Open University Learning Educational Review
+
+Introduction
+
+Open University Learning                                                                                                                            
+Open University established a project termed OU Analyse which intended to capture student performance by applying machine learning methods.  OU provided datasets generated from their Virtual Learning Environment (VLE).  These data include demographics and VLE activity.  The pilot project was applied to introductory university modules used on 1500-3000 students in Spring 2014 until Summer 2016. 
+OU aims to properly provide resources such as tutors, office hours, and Student Support Teams to all their students with the goal of targeting student who are not satisfying class requirements.  âThe overall objective is to significantly improve the retention of OU students.â  In addition, Open University will diagnose student performance, find areas of poor performance, evaluate the curriculum to adjust and improve it accordingly.
+
+Scope of project
+KINGS data science consulting has been contracted on behalf of Open University to assess student performance over 2 years, 4 semesters. Areas of concern include:
+â¢	How often are students engaged?  How often are they logging in, once a day or multiple times in one day only once a week?  Will this lead to higher test scores? 
+â¢	How do we assess if the module is too difficult or not difficult enough?
+
+Key data resources
+The main sources of data provided for this assessment come in the categories listed below.
+â¢	Courses: modules, when they were given and how long they lasted.
+â¢	Assessments: type of assessment performed on the courses, when the assessment was performed during the module, and the weight of the assessment.
+â¢	Student information: demographics but mainly number of attempts at the module, current number of credits being taken and the final result.
+â¢	Student registration: marks if the student dropped out of the module.
+â¢	Student VLE: number of times a student interacts with the module.
+
+Outcomes
+Deliverables
+The client will be provided with all code, a final technical report and an executive summary slide deck.
+
+Links
+https://analyse.kmi.open.ac.uk/
+
