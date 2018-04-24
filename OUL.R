@@ -1,5 +1,7 @@
 library(tidyverse)
 
+#Student Informaion: Who failed and who didn't
+
 studentInfo <- read_csv("C:/Users/tishas/Desktop/personal/Springboard/exercises/Springboard_Capstone_Project/datasets/studentInfo.csv")
 is.na(studentInfo)
 any(is.na(studentInfo))
@@ -13,6 +15,7 @@ studentInfo2 <- studentInfo1 %>%
 studentInfo2 %>% glimpse
 
 #Would like to be ale to use summarise for the following
+
 studentInfo3 <- filter(studentInfo2, final_result == "Pass") 
 studentInfo3 %>% glimpse
 #12,361 students passed
@@ -23,6 +26,8 @@ studentInfo5 <- filter(studentInfo2, final_result == "Withdrawn")
 studentInfo5 %>% glimpse
 #10,156 students withdrew
 
+#Distribution of Scores 
+
 studentAssessment <- read_csv("C:/Users/tishas/Desktop/personal/Springboard/exercises/Springboard_Capstone_Project/datasets/studentAssessment.csv")
 is.na(studentAssessment)
 any(is.na(studentAssessment))
@@ -31,8 +36,10 @@ sum(is.na(studentAssessment))
 studentAssessment1 <- studentAssessment %>% select(-date_submitted, -is_banked)
 hist(studentAssessment$score)
 studentAssessment1 %>% glimpse
-studentAssessment1 %>% filter(score <= 40)
+studentAssessment1 %>% filter(score <= 40) %>% summarise(sum_below_40 = sum(score <= 40))
 #9544 students did not make the 40% cutoff
+
+#How often students use the modules
 
 studentVle <- read_csv("C:/Users/tishas/Desktop/personal/Springboard/exercises/Springboard_Capstone_Project/datasets/studentVle.csv")
 studentVle %>% glimpse
@@ -43,6 +50,8 @@ studentVle1 <- studentVle %>% select(-date)
 studentVle1 %>% dim
 studentVle1 %>% arrange(sum_click)
 plot(studentVle$sum_click)
+
+#Types of assessment used and when
 
 assessments <- read_csv("C:/Users/tishas/Desktop/personal/Springboard/exercises/Springboard_Capstone_Project/datasets/assessments.csv")
 assessments %>% glimpse
