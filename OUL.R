@@ -16,13 +16,16 @@ studentInfo2 %>% glimpse
 
 #Would like to be ale to use summarise for the following
 
-studentInfo3 <- filter(studentInfo2, final_result == "Pass") 
+studentInfo3 <- filter(studentInfo2, final_result == "Pass") %>% 
+  summarise(sum_pass = sum(final_result == "Pass"))
 studentInfo3 %>% glimpse
 #12,361 students passed
-studentInfo4 <- filter(studentInfo2, final_result == "Fail")
+studentInfo4 <- filter(studentInfo2, final_result == "Fail") %>% 
+  summarise(sum_pass = sum(final_result == "Fail"))
 studentInfo4 %>% glimpse
 #7,052 students failed
-studentInfo5 <- filter(studentInfo2, final_result == "Withdrawn")
+studentInfo5 <- filter(studentInfo2, final_result == "Withdrawn") %>% 
+  summarise(sum_pass = sum(final_result == "Withdrawn"))
 studentInfo5 %>% glimpse
 #10,156 students withdrew
 
