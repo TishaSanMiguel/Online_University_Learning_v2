@@ -23,6 +23,16 @@ studentInfo5 <- filter(studentInfo2, final_result == "Withdrawn")
 studentInfo5 %>% glimpse
 #10,156 students withdrew
 
+studentAssessment <- read_csv("C:/Users/tishas/Desktop/personal/Springboard/exercises/Springboard_Capstone_Project/datasets/studentAssessment.csv")
+is.na(studentAssessment)
+any(is.na(studentAssessment))
+sum(is.na(studentAssessment))
+#remove date and banked 
+studentAssessment1 <- studentAssessment %>% select(-date_submitted, -is_banked)
+hist(studentAssessment$score)
+studentAssessment1 %>% glimpse
+studentAssessment1 %>% filter(score <= 40)
+#9544 students did not make the 40% cutoff
 
 studentVle <- read_csv("C:/Users/tishas/Desktop/personal/Springboard/exercises/Springboard_Capstone_Project/datasets/studentVle.csv")
 studentVle %>% glimpse
@@ -47,16 +57,6 @@ assessments1 <- assessments %>%
          assessment_type = gsub(pattern = "Exam", replacement = "Final Exam", x = assessment_type))
 assessments1 %>% glimpse
 
-studentAssessment <- read_csv("C:/Users/tishas/Desktop/personal/Springboard/exercises/Springboard_Capstone_Project/datasets/studentAssessment.csv")
-is.na(studentAssessment)
-any(is.na(studentAssessment))
-sum(is.na(studentAssessment))
-#remove date and banked 
-studentAssessment1 <- studentAssessment %>% select(-date_submitted, -is_banked)
-hist(studentAssessment$score)
-studentAssessment1 %>% glimpse
-studentAssessment1 %>% filter(score <= 40)
-#9544 students did not make the 40% cutoff
 
 
 

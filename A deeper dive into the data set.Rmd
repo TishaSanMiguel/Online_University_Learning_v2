@@ -1,0 +1,29 @@
+---
+title: "Your Capstone Project Milestone Report"
+author: "Tisha San Miguel"
+date: "April 23, 2018"
+output: pdf_document
+---
+
+## A deeper dive into the data set
+Open Univeristy Learning provides a rich set of data <https://analyse.kmi.open.ac.uk/open_dataset#rights>.
+
+What important fields and information does the data set have?
+Courses: modules, when they were given and how long they lasted.
+Assessments: type of assessment performed on the courses, when the assessment was performed during the module, and the weight of the assessment.
+Student information: demographics but mainly number of attempts at the module, current number of credits being taken and the final result.
+Student registration: marks if the student dropped out of the module.
+Student VLE: number of times a student interacts with the module.
+
+## What kind of cleaning and wrangling did you need to do?
+I used filter and select for the columns I needed.  
+I re-named terms that might not be clear to the reader with mutate() .  
+I used plot() and hist() for quick visualization.  
+Dim() and glimpse() were used to check the dataframe.
+
+## Any preliminary exploration you’ve performed and your initial findings?
+I have found that less than half of the students did not pass their courses.
+
+## Based on these findings, what approach are you going to take? How has your approach changed from what you initially proposed, if applicable?
+My intial proposal was to find ways to retain students but so far I have only found how many students have actually passed.  I still have to trace back my findings to the type and weight of the assessment and to the number of times the students engaged with the course (sum_click).  I would also like to find if the individual students have improved over the course of the semesters.
+
